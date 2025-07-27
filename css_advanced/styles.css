@@ -72,3 +72,47 @@ header {
   font-weight: bold;
   border-radius: 25px;
 }
+/* Quote Section */
+.quote {
+  background-color: #C271FF;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.quote-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.quote-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.quote-text {
+  max-width: 500px;
+}
+
+.quote blockquote {
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.quote-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.quote-title {
+  font-size: 14px;
+  opacity: 0.8;
+}
