@@ -244,3 +244,41 @@ header {
 .register-btn:hover {
   background-color: #A050DA;
 }
+/* FAQ Section */
+.faq {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  color: #071629;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 32px;
+  margin-bottom: 60px;
+}
+
+.faq-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  width: 400px;
+  text-align: left;
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4b4b4b;
+}
