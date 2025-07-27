@@ -282,3 +282,37 @@ header {
   line-height: 1.6;
   color: #4b4b4b;
 }
+/* Footer */
+.footer {
+  background-color: #071629;
+  color: white;
+  padding: 60px 20px 30px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.footer-logo img {
+  height: 40px;
+}
+
+.footer-social a {
+  margin: 0 10px;
+}
+
+.footer-social img {
+  height: 30px;
+  width: 30px;
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: #8c8c8c;
+}
