@@ -116,3 +116,75 @@ header {
   font-size: 14px;
   opacity: 0.8;
 }
+/* Videos Section */
+.videos {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.videos h2 {
+  font-size: 32px;
+  margin-bottom: 60px;
+}
+
+.video-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.video-card {
+  width: 255px;
+  text-align: left;
+}
+
+.video-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.video-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.video-card .desc {
+  font-size: 14px;
+  color: #737373;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.author img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.author p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.stars {
+  color: #C271FF;
+}
+
+.duration {
+  font-size: 14px;
+  color: #C271FF;
+  font-weight: bold;
+}
