@@ -16,8 +16,12 @@ It is a responsive landing page for a headphones store, built entirely with **HT
 - Button hover/active: `opacity: 0.9`
 - Max content width: `1000px`, centered.
 
+<<<<<<< HEAD
 ## Structure
 
 
 
 
+=======
+## Structur
+>>>>>>> 37a897d (Add project description to README.md)
