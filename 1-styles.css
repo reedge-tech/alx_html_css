@@ -1,0 +1,41 @@
+/* Basic reset & variables */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --main-red:#FF6565;
+  --muted:#6b6b6b;
+  --max-w:1000px;
+  --font: 'Source Sans Pro', system-ui, Arial;
+}
+
+/* Layout container */
+.container{ width:calc(100% - 40px); max-width:var(--max-w); margin:0 auto; }
+
+/* Reuse header/hero styles (kept simple for clarity) */
+.site-header{ background:#0b0b0b; color:#fff; }
+.header-row{ display:flex; justify-content:space-between; align-items:center; padding:18px 0; }
+.logo img{ height:40px; }
+.main-nav ul{ display:flex; gap:18px; list-style:none; }
+.main-nav a{ color:#fff; text-decoration:none; font-weight:600; }
+.hero{ background:url("images/hero-background.jpg") center/cover no-repeat; padding:64px 0 110px; text-align:center; }
+.hero h1{ font-size:2.1rem; color:#fff; margin-bottom:10px; }
+.btn-cta{ background:var(--main-red); color:#fff; padding:10px 18px; border-radius:6px; display:inline-block; text-decoration:none; font-weight:700; }
+
+/* WHAT WE DO */
+.what-we-do{ padding:60px 0; background:#f7f7f7; color:#222; text-align:center; }
+.what-we-do h2{ font-size:1.8rem; margin-bottom:6px; }
+.what-we-do .lead{ color:var(--muted); max-width:720px; margin:0 auto 30px; }
+.services{ display:flex; gap:18px; justify-content:center; flex-wrap:wrap; }
+
+/* service card */
+.service{
+  background:#fff; width:240px; border-radius:10px; padding:20px; box-shadow:0 6px 18px rgba(0,0,0,.06); text-align:center;
+}
+.icon{ display:block; font-size:38px; color:var(--main-red); margin-bottom:12px; }
+
+/* small screens */
+@media (max-width:480px){
+  .header-row{ flex-direction:column; gap:12px; }
+  .main-nav ul{ flex-direction:column; gap:8px; }
+  .services{ gap:12px; }
+  .service{ width:100%; max-width:320px; margin:0 auto; }
+}

@@ -1,0 +1,140 @@
+/* =========================
+   Reset and base variables
+   ========================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+:root {
+  --accent: #FF6565;     /* links hover and primary button */
+  --text: #111;
+  --muted: #555;
+  --max-width: 1000px;   /* required max width */
+  --gap: 24px;
+  --radius: 10px;
+  --page-pad: 16px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font);
+  color: var(--text);
+  line-height: 1.45;
+  background: #fff;
+}
+
+/* Container — keeps content centered with max width = 1000px */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-pad);
+}
+
+/* Links — keep generic selector */
+a { color: inherit; text-decoration: none; }
+a:hover,
+a:active { color: var(--accent); }
+
+/* ===================
+   Header / Navigation
+   =================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(4px);
+  z-index: 20;
+  border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  padding: 14px 0;
+}
+
+/* logo */
+.logo img { height: 40px; display: block; }
+
+/* nav links — simple generic selector */
+.main-nav { display: flex; gap: 20px; align-items: center; }
+.main-nav a { font-weight: 600; padding: 6px; }
+
+/* mobile menu button (hidden on desktop) */
+.menu-btn {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* =========
+   Hero area
+   ========= */
+.hero {
+  padding: 48px 0 80px;
+  background: linear-gradient(180deg, #fff, #fcfcfc);
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-top: 20px;
+}
+
+/* text column */
+.hero-text { flex: 1; max-width: 560px; }
+.hero-text h1 {
+  font-size: clamp(28px, 4.5vw, 48px);
+  margin-bottom: 14px;
+  line-height: 1.05;
+}
+.hero-text p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* buttons */
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+.btn.primary { background: var(--accent); color: #fff; border: 0; }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid #ddd; }
+
+/* required button hover/active */
+.btn:hover,
+.btn:active { opacity: 0.9; }
+
+/* hero image column */
+.hero-image img {
+  width: 420px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========================
+   Mobile layout: <=480px
+   ======================== */
+@media (max-width: 480px) {
+  .main-nav { display: none; }        /* hide nav on mobile; use menu button if you implement it */
+  .menu-btn { display: block; }       /* show mobile menu button */
+
+  .hero-inner {
+    flex-direction: column-reverse;   /* image above text or below — choose what Figma shows */
+    text-align: center;
+    gap: 20px;
+  }
+  .hero-text { max-width: 100%; }
+  .hero-image img { width: 80%; max-width: 320px; }
+}
