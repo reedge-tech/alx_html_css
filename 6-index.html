@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Headphones — Our results (CSS pentagons)</title>
+  <link rel="stylesheet" href="6-styles.css">
+</head>
+<body>
+  <!-- Header (kept simple) -->
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="#" class="logo" aria-label="Headphones home">Headphones</a>
+      <nav aria-label="Main navigation" class="main-nav">
+        <ul>
+          <li><a href="#what-we-do">What we do</a></li>
+          <li><a href="#results">Our results</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero (short) -->
+  <section class="hero">
+    <div class="container">
+      <h1>Sound made simple — clear, warm, powerful</h1>
+      <p>Design-driven headphones and audio tools that put you in control of every sound detail.</p>
+    </div>
+  </section>
+
+  <!-- What we do -->
+  <section id="what-we-do" class="what-we-do">
+    <div class="container">
+      <h2>What we do...</h2>
+      <p class="lead">We design and craft audio experiences — hardware, software and services that make sound delightful.</p>
+    </div>
+  </section>
+
+  <!-- OUR RESULTS (now uses CSS pentagons instead of an image) -->
+  <section id="results" class="our-results">
+    <div class="container results-inner">
+      <h2>Our results speak for themselves</h2>
+      <p class="lead">We consistently deliver measurable improvements for our clients.</p>
+
+      <!-- Pentagon background area -->
+      <div class="pentagon-bg" aria-hidden="true">
+        <div class="pentagon p1"></div>
+        <div class="pentagon p2"></div>
+        <div class="pentagon p3"></div>
+        <div class="pentagon p4"></div>
+        <div class="pentagon p5"></div>
+      </div>
+
+      <!-- Foreground stats (kept readable on top of pentagons) -->
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">+2%</div>
+          <div class="stat-label">Performance</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">+500</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">+150</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer placeholders -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact us</h2>
+      <p>Form (omitted here)</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Headphones</p>
+    </div>
+  </footer>
+</body>
+</html>

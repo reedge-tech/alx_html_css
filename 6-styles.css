@@ -1,0 +1,108 @@
+/* ====== RESET & BASE ====== */
+* { box-sizing: border-box; margin:0; padding:0; }
+:root{
+  --main-red: #FF6565;
+  --muted: #666;
+  --bg: #0b0b0b;
+  --card-bg: #fff;
+  --max-w: 1000px;
+  --font: 'Source Sans Pro', Arial, sans-serif;
+}
+html,body{ font-family: var(--font); }
+
+/* ====== LAYOUT CONTAINER ====== */
+.container{
+  width: calc(100% - 40px);
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* ====== HEADER & HERO (simple) ====== */
+.site-header{ background: var(--bg); color: white; }
+.header-row{ display:flex; justify-content:space-between; align-items:center; padding:18px 0;}
+.logo{ font-weight:700; color:white; text-decoration:none; }
+.main-nav ul{ list-style:none; display:flex; gap:18px; }
+.main-nav a{ color:white; text-decoration:none; font-weight:600; }
+.hero{ background: none; padding:60px 0 40px; text-align:center; color:#111; }
+.hero h1{ font-size:1.8rem; margin-bottom:10px; }
+.lead{ color:var(--muted); max-width:720px; margin:0 auto 22px; }
+
+/* ====== OUR RESULTS SECTION ====== */
+.our-results{
+  position: relative;
+  overflow: hidden; /* pentagons will be absolutely positioned */
+  padding: 80px 0;
+  background-color: #fafafa;
+  color: #222;
+}
+
+.results-inner{ position: relative; z-index: 2; } /* keep main content above pentagons */
+
+.our-results h2{ text-align:center; margin-bottom:8px; font-size:1.75rem; }
+.our-results .lead{ margin-bottom:22px; }
+
+/* Pentagons background container */
+.pentagon-bg{
+  position: absolute;
+  inset: 0; /* fill section */
+  pointer-events: none; /* so they don't block clicks */
+  z-index:1;
+}
+
+/* basic pentagon shape using clip-path */
+.pentagon{
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, rgba(255,101,101,0.12), rgba(255,101,101,0.03));
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0 38%);
+  transform-origin: center;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.06));
+}
+
+/* different sizes & positions for visual interest */
+.pentagon.p1{ width:220px; height:220px; left:6%; top:10%; background: linear-gradient(135deg, rgba(255,101,101,0.18), rgba(255,101,101,0.04)); transform: rotate(-10deg); }
+.pentagon.p2{ width:160px; height:160px; left:28%; top:6%; background: linear-gradient(135deg, rgba(0,150,255,0.10), rgba(0,150,255,0.02)); transform: rotate(6deg); }
+.pentagon.p3{ width:300px; height:300px; right:6%; top:4%; background: linear-gradient(135deg, rgba(255,200,0,0.12), rgba(255,200,0,0.02)); transform: rotate(-6deg); opacity:0.95; }
+.pentagon.p4{ width:130px; height:130px; left:18%; bottom:8%; background: linear-gradient(135deg, rgba(120,200,150,0.12), rgba(120,200,150,0.02)); transform: rotate(4deg); }
+.pentagon.p5{ width:180px; height:180px; right:24%; bottom:6%; background: linear-gradient(135deg, rgba(150,100,255,0.12), rgba(150,100,255,0.02)); transform: rotate(-8deg); }
+
+/* Add small inner pentagon via pseudo-element for depth */
+.pentagon::after{
+  content: "";
+  position: absolute;
+  inset: 14% 14%;
+  background: rgba(255,255,255,0.06);
+  clip-path: inherit;
+  border-radius: 4px;
+}
+
+/* ====== stats cards (foreground) ====== */
+.stats{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:26px;
+}
+
+.stat{
+  background: var(--card-bg);
+  padding:22px;
+  border-radius:10px;
+  width:180px;
+  text-align:center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  z-index:3; /* above pentagon-bg but inside results-inner */
+}
+
+.stat-number{ font-size:1.6rem; color:var(--main-red); font-weight:700; margin-bottom:6px; }
+.stat-label{ color:var(--muted); font-size:0.95rem; }
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px){
+  .pentagon{ display:none; } /* hide decorative pentagons on small screens for readability & performance */
+  .our-results{ padding:40px 0; }
+  .stat{ width:100%; max-width:320px; }
+  .hero h1{ font-size:1.4rem; }
+}
