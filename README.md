@@ -1,13 +1,5 @@
-# ALX HTML CSS Project - Headphones
+# ALX HTML CSS Project
 
-This repository contains all HTML, CSS, and JavaScript files for the Headphones landing page project.
+This is the README for the ALX Headphones project.
 
-## Features
-- Responsive design for desktop and mobile
-- Navigation menu with hamburger toggle
-- Custom icons and animations
-- CSS-only pentagon shapes without images
-
-## Author
-Reedge Dangana  
-Date: August 2025
+Author: Reedge Dangana
