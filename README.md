@@ -1,3 +1,4 @@
+HEAD
 # ​ Headphones Landing Page
 
 This project is part of the **ALX Software Engineering Program** (HTML & CSS Advanced Module).  
@@ -16,12 +17,17 @@ It is a responsive landing page for a headphones store, built entirely with **HT
 - Button hover/active: `opacity: 0.9`
 - Max content width: `1000px`, centered.
 
-<<<<<<< HEAD
 ## Structure
 
 
 
+This project is part of the ALX Front-End curriculum.  
+It is a responsive landing page built from scratch using HTML and CSS, based on a Figma design.
 
-=======
+HEAD
 ## Structur
->>>>>>> 37a897d (Add project description to README.md)
+37a897d (Add project description to README.md)
+
+## Author
+Reedge Dangana
+ 5da4d59 (Task 0: Added README.md)
